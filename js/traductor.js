@@ -40,6 +40,12 @@ const morse = {
   ",": "--..--",
 };
 
+function enviarTexto() {
+  const palabra = document.getElementById("palabra").value.trim();
+  const resultado = textoAmorse(palabra);
+  document.getElementById("traduccionTexto").innerText = resultado;
+}
+
 function textoAmorse(palabra) {
   let resultado = "";
   palabra = palabra.toUpperCase();
@@ -52,21 +58,22 @@ function textoAmorse(palabra) {
   return resultado.trim().toLowerCase();
 }
 
-console.log(textoAmorse("marlon"));
+function mostrarTraduccionMorse() {
+  const codigo = document.getElementById("codigo").value.trim();
+  const resultado = enviarMorse(codigo);
+  document.getElementById("traduccionMorse").innerText = resultado;
+}
 
-// invertir diccionario
+//* diccionario inverso
 const morseInverso = {};
 for (let clave in morse) {
   morseInverso[morse[clave]] = clave;
 }
-
-function morseATexto(codigo) {
+function enviarMorse(codigo) {
   let resultado = "";
   const palabras = codigo.trim().split(" / ");
-
   for (let i = 0; i < palabras.length; i++) {
     const letras = palabras[i].split(" ");
-
     for (let j = 0; j < letras.length; j++) {
       if (morseInverso[letras[j]]) {
         resultado += morseInverso[letras[j]];
@@ -74,8 +81,40 @@ function morseATexto(codigo) {
     }
     resultado += " ";
   }
-
   return resultado.trim().toLowerCase();
 }
+//console.log(morseATexto(".... --- .-.. .-"));
 
-console.log(morseATexto(".... --- .-.. .-"));
+// ! Logica para probar en consola
+//* Logica de texto a morse */
+// function textoAmorse(palabra) {
+//   let resultado = "";
+//   palabra = palabra.toUpperCase();
+//   for (let x = 0; x < palabra.length; x++) {
+//     let letra = palabra[x];
+//     if (morse[letra]) {
+//       resultado += morse[letra] + " ";
+//     }
+//   }
+//   return resultado.trim().toLowerCase();
+// }
+//console.log(textoAmorse("marlon"));
+
+// invertir diccionario
+
+//* Logica de Morse a texto
+// function morseATexto(codigo) {
+//   let resultado = "";
+//   const palabras = codigo.trim().split(" / ");
+//   for (let i = 0; i < palabras.length; i++) {
+//     const letras = palabras[i].split(" ");
+//     for (let j = 0; j < letras.length; j++) {
+//       if (morseInverso[letras[j]]) {
+//         resultado += morseInverso[letras[j]];
+//       }
+//     }
+//     resultado += " ";
+//   }
+//   return resultado.trim().toLowerCase();
+// }
+//console.log(morseATexto(".... --- .-.. .-"));
