@@ -25,4 +25,5 @@
 .logo-derecha {
   width: 50px;
   height: auto;
+    cursor: pointer;
 }

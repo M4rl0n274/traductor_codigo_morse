@@ -15,16 +15,18 @@
 
 <body>
     <header class="navbar">
-        <img src="/assets/icon/github (1).png" alt="Logo Izquierda" class="logo-izquierda" />
+        <a href="https://github.com/M4rl0n274">
+            <img src="/assets/icon/github (1).png" alt="Logo Izquierda" class="logo-izquierda" />
+        </a>
 
         <!-- <nav class="nav-links">
             <a href="#">Inicio</a>
             <a href="#">Servicios</a>
             <a href="#">Contacto</a>
         </nav> -->
-
-        <img src="/assets/img/Logo2.png" alt="Logo Derecha" class="logo-derecha" />
-
+        <a href="">
+            <img src="/assets/img/Logo2.png" alt="Logo Derecha" class="logo-derecha" />
+        </a>
 
 
     </header>
@@ -33,40 +35,42 @@
     <main class="contenido">
         <section>
             <h1>Traductor de Código Morse</h1>
-            <h2>Convierte texto a código Morse y viceversa de forma rápida y sencilla</h2>
+            <h3>Convierte texto a código Morse y viceversa de forma rápida y sencilla</h3>
             <div class="contenedorTraductor">
-            <div class="contenedorUno">Texto a Morse<br>
-                <input id="palabra" type="text" placeholder="Escribe aquí">
-                <p id="traduccionTexto">=</p>
-                <button type="button" onclick="enviarTexto()">Traducir</button>
-            </div>
+                <div class="contenedorUno">
+                    <h2>Texto a Morse</h2><br>
+                    <input id="palabra" type="text" placeholder="Escribe aquí" >
+                    <p id="traduccionTexto">=</p>
+                    <button type="button" onclick="enviarTexto()">Traducir</button>
+                </div>
 
 
-            <div class="contenedorDos">Código Morse a texto<br>
-                <input id="codigo" type="text" placeholder="Escribe aquí el codigo Morse">
-                <p id="traduccionMorse">=</p>
-                <button type="button" onclick="mostrarTraduccionMorse()">Traducir</button>
-            </div>
+                <div class="contenedorDos">
+                    <h2>Código Morse a texto</h2><br>
+                    <input id="codigo" type="text" placeholder="Escribe aquí el codigo Morse">
+                    <p id="traduccionMorse">=</p>
+                    <button type="button" onclick="mostrarTraduccionMorse()">Traducir</button>
+                </div>
             </div>
         </section>
 
         <article>
-            <h2>¿Qué es el Código Morse?</h2>
+            <h3>¿Qué es el Código Morse?</h3>
             <p>El código Morse es un sistema de codificación que representa letras, números y signos de puntuación
-                mediante una serie de señales cortas y largas: puntos (·) y rayas (−). Fue creado en el siglo XIX por
+                mediante una serie de señales cortas y largas: puntos (·) y rayas (-). Fue creado en el siglo XIX por
                 Samuel Morse y Alfred Vail para transmitir mensajes a través del telégrafo.</p>
         </article>
 
         <article>
-            <h2>¿Cómo usar el traductor?</h2>
+            <h3>¿Cómo usar el traductor?</h3>
             <p> Escribe texto normal o código Morse en el campo correspondiente, selecciona el modo de traducción, y el
                 sistema convertirá automáticamente el contenido. Puedes traducir frases como "Hola Mundo" o códigos como
                 ".... --- .-.. .- / -- ..- -. -.. ---".</p>
         </article>
 
         <article>
-            <h2>Ejemplo rápido</h2>
-            <p><b>Texto</b>: SOS
+            <h3>Ejemplo rápido</h3>
+            <p><b>Texto</b><br>: SOS
                 <b>Morse:</b> ... --- ...
             </p>
         </article>
