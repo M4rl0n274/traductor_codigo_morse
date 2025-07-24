@@ -1,3 +1,28 @@
-header{
-    background-color: black;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #000000;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  width: 100px;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.logo-izquierda,
+.logo-derecha {
+  width: 50px;
+  height: auto;
 }
